@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+ --color-dark: hsl(252,30%,17%);
+ --color-light: hsl(252,30%,95%);
+ --color-primary: hsl(252,75%,60%);
+ --color-secondry: hsl(252,100%,90%);
+ --color-grey: hsl(252,15%,65%);
+ --color-success: hsl(120,95%,65%);
+ --color-danger:hsl(0,95%,65%);
+ --color-white: hsl(252,30%,100%);
+ --color-black: hsl(252,30%,10%);
+
+ --btn-padding: 0.6rem 2rem;
+ --border-radius: 2rem;
+ --card-border-radius:1rem;
+ --search-padding:0.6rem 1rem;
+ --card-padding: 1rem;
+}
+
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+}
+
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.profile--pic{
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.btn{
+    padding: var(--btn-padding);
+    display: inline-block;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary{
+    color: white;
+    background: var(--color-primary);
+}
+
+.text-bold{
+    font-weight: 500;
+}
+
+.text-muted{
+    color: var(--color-grey);
+}
+
+/* Actual navbar starts here */
+
+nav{
+    width: 100%;
+    padding: 0.7rem 0;
+    z-index: 10;
+    background: var(--color-white);
+    position: fixed;
+    top: 0;    
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gg-search{
+    display: inline-block !important;
+}
+nav .search--bar{
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+nav .search--bar input[type="search"]{
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+
+nav .search--bar input[type="search"]::placeholder{
+    color: var(--color-grey);
+}
+
+nav .create {
+    gap: 2rem;
+}
